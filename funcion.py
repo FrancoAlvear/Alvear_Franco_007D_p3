@@ -1,0 +1,93 @@
+import funcion as fn
+
+
+def validar_rut():
+    while True:
+        try:
+            rut = int(input("Ingrese rut: "))
+            if rut >= 1000000 and rut <= 99999999:
+                return rut
+            else:
+                print("ERROR! RUT ENTRE 1000000 Y 99999999!")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+
+
+
+
+
+def validar_nombre():
+    while True:
+        nom = input("Ingrese nombre: ")
+        if len(nom.strip()) >= 3 and nom.isalpha():
+            return nom
+        else:
+            print("ERROR! DEBE TENER AL MENOS 3 LETRAS!")
+
+
+
+
+
+
+
+def validar_piso():
+    while True:
+        try:
+            piso = int(input("Ingrese piso(1-10): "))
+            if piso in lista_pisos:
+                return piso
+            else:
+                print("ERROR! PISO INCORRECTO!")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+
+
+
+
+def validar_depto():
+    while True:
+        depto = input("Ingrese depto(A,B,C,D): ")
+        if depto.upper() in lista_letras:
+            return depto
+        else:
+            print("ERROR! DEPARTAMENTO INCORRECTO!")
+
+
+
+def validar_correo():
+    while True:
+        correo = input("Ingrese correo: ")
+        if "@" in correo:
+            return correo
+        else:
+            print("ERROR! CORREO INCORRECTO!")
+
+
+
+
+def validar_cantidad():
+    while True:
+        try:
+            cantidad = int(input("Ingrese cantidad de personas(1-6): "))
+            if cantidad >= 1 and cantidad <= 6:
+                return cantidad
+            else:
+                print("ERROR! LA CANTIDAD DEBE ESTAR ENTRE 1 Y 6!")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+
+
+
+
+def validar_cantidad_prod():
+    while True:
+        try:
+            cantidad = int(input("Ingrese cantidad: "))
+            if cantidad >= 0:
+                return cantidad
+            else:
+                print("ERROR! CANTIDAD DEBE SER 0 O POSITIVA!")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+
+
